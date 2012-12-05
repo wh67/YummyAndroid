@@ -12,7 +12,8 @@
     <string name="activity_main_button_register">Register</string>
     <string name="search_by_location">City, zip code, street, etc</string>
     <string name="search_by_type">chinese, american, etc</string>
-    
+    <string name="location">Where are you?</string>
+    <string name="food_type">What would you like?</string>
     
 
     <!-- LoginActivity -->
@@ -25,7 +26,11 @@
     <string name="activity_login_button_register">Register</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_search_results">SearchResultsActivity</string>
-    <string name="location">Where are you?</string>
-    <string name="food_type">What would you like?</string>
+
+    <!-- VendorActivity -->
+    <string name="vendor1">Jack\'s Pizza</string>
+    <string name="view_menu">Browse Menu</string>
+    <string name="view_review">Read Reviews</string>
+    <string name="vendor_description">We sell pizzas!</string>
 
 </resources>
