@@ -27,9 +27,15 @@
     <string name="title_activity_search_results">SearchResultsActivity</string>
 
     <!-- VendorActivity -->
+    <string name="title_activity_vendor">VendorActivity</string>
     <string name="vendor1">Jack\'s Pizza</string>
     <string name="view_menu">Browse Menu</string>
     <string name="view_review">Read Reviews</string>
     <string name="vendor_description">We sell pizzas!</string>
+    <string name="weekdays">Monday-Friday</string>
+    <string name="weekend">Saturday/Sunday</string>
+    <string name="hours">8:30 am to 5:00 pm</string>
+    <string name="closed">Closed</string>
+    <string name="hours_of_operation">Hours of operation</string>
 
 </resources>

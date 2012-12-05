@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/vendorName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="80dp"
         android:text="@string/view_menu" />
     
     <Button
@@ -29,16 +29,83 @@
         android:layout_below="@+id0/button_menu"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="@string/view_review" />
+        android:text="@string/view_review"/>
     
     <TextView
-        android:id="@+id/vendorDescription"
-        android:layout_width="match_parent"
+        android:id="@+id/hoursOfOperation"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_review"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/vendor_description"
+        android:layout_below="@+id0/button_review"
+        android:layout_alignBottom="@+id/daysOfOperation1Row1"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:text="@string/hours_of_operation"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hoursOfOperation"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/daysOfOperation1Row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/weekdays"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/hours1Row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/hours"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+        <TableRow
+            	android:id="@+id/tableRow2"
+           	 	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_below="@+id/tableRow1"
+            	android:layout_marginTop="0dp" >
+
+            <TextView
+                android:id="@+id/daysOfOperation2Row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/weekend"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/hours2Row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal"
+                android:text="@string/closed"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/vendorDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/vendorName"
+            android:gravity="center"
+            android:text="@string/vendor_description"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
