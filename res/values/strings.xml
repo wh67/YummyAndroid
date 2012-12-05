@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">Yummy</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- MainActivity -->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="activity_main_button_login">Login</string>
+    <string name="activity_main_button_searchNearby">Search</string>
+    <string name="activity_main_button_search">Find food truck</string>
+    <string name="activity_main_button_register">Register</string>
+    <string name="search_by_location">City, zip code, street, etc</string>
+    <string name="search_by_type">chinese, american, etc</string>
+    
+    
+
+    <!-- LoginActivity -->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="activity_login_hint_username">Username</string>
+    <string name="activity_login_hint_password">Password</string>
+    <string name="activity_login_textView_signIn">Sign into your account</string>
+    <string name="activity_login_button_signIn">Sign In</string>
+    <string name="activity_login_textView_register">Don\'t have an account?</string>
+    <string name="activity_login_button_register">Register</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_search_results">SearchResultsActivity</string>
+    <string name="location">Where are you?</string>
+    <string name="food_type">What would you like?</string>
+
+</resources>
