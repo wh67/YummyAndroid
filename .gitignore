@@ -1,16 +1,6 @@
 # Compiled source #
 ###################
-*.class
-*.cache
-*.apk
-*.ap_
-*.dex
-
-# Package Files #
-bin/*.jar
-bin/*.war
-bin/*.ear
-bin/*.png
+bin/*
 
 # OS generated files #
 ######################
