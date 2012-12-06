@@ -13,14 +13,14 @@ public class SearchResultsActivity extends ListActivity {
 	private String [] values = new String[7];
 	
 	private Vendor[] vendors = {
-						new Vendor("Jack's Pizza", "", "", null, false),
-						new Vendor("Sally's Subs", "", "", null, false),
-						new Vendor("Bob's Burritos", "", "", null, false),
-						new Vendor("Larry's Lasagna", "", "", null, false),
-						new Vendor("Helga's Hell Kitchen", "", "", null, false),
-						new Vendor("Carlos' Cuisine", "", "", null, false),
-						new Vendor("Isabel's Ice Cream", "", "", null, false)
-	};
+			new Vendor("Jack's Pizza", "We sell Pizzas!", "", new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
+			new Vendor("Sally's Subs", "", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
+			new Vendor("Bob's Burritos", "", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
+			new Vendor("Larry's Lasagna", "", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
+			new Vendor("Helga's Hell Kitchen", "", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
+			new Vendor("Carlos' Cuisine", "", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
+			new Vendor("Isabel's Ice Cream", "We love Ice Cream!", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {900,1800}}, false)
+			};
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,9 @@ public class SearchResultsActivity extends ListActivity {
     }
     
     protected void onListItemClick(ListView lv, View v, int position, long id){
-    	super.onListItemClick(lv, v, position, id);
+    	Vendor vendor = vendors[position];
     	Intent intent = new Intent(this, VendorActivity.class);
+    	intent.putExtra("Vendor", vendor);
     	startActivity(intent);
     	
     }
