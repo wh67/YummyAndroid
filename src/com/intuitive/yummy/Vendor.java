@@ -2,6 +2,8 @@ package com.intuitive.yummy;
 
 import java.io.Serializable;
 
+//Contain vendor's information
+
 public class Vendor implements Serializable {
 	private String name;
 	private String description;

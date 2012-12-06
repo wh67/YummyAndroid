@@ -2,6 +2,8 @@ package com.intuitive.yummy;
 
 import java.util.ArrayList;
 
+//Contain menu information includes a list of menu items
+
 public class Menu {
 	private ArrayList<MenuItem> menuItems = new ArrayList<MenuItem>();
 	

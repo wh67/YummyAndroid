@@ -12,6 +12,7 @@ public class SearchResultsActivity extends ListActivity {
 	
 	private String [] values = new String[7];
 	
+	//dummy data for vendors
 	private Vendor[] vendors = {
 			new Vendor("Jack's Pizza", "We sell Pizzas!", "", new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
 			new Vendor("Sally's Subs", "Welcome to Sally's Subs", "",  new int[][] {{830,1800}, {830,1800}, {830,1800}, {830,1800}, {830,1800}, {0,0}, {0,0}}, false),
@@ -24,7 +25,8 @@ public class SearchResultsActivity extends ListActivity {
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    	
+    	//Get the list of vendor and create a array of vendors by name only
+    	//then pass it to the list adapter to display it as a list in the app
     	for (int i = 0; i < vendors.length; i++)
     	{
     		values[i] = vendors[i].getName();
@@ -47,6 +49,7 @@ public class SearchResultsActivity extends ListActivity {
         return true;
     }
     
+    //get the correspond vendor and pass it to the VendorActivity
     protected void onListItemClick(ListView lv, View v, int position, long id){
     	Vendor vendor = vendors[position];
     	Intent intent = new Intent(this, VendorActivity.class);

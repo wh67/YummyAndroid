@@ -2,6 +2,8 @@ package com.intuitive.yummy;
 
 import java.util.ArrayList;
 
+//includes menu item information, includes their ingredients' information
+
 public class MenuItem {
 	private String name;
 	private double price;

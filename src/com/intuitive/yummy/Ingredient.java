@@ -1,5 +1,6 @@
 package com.intuitive.yummy;
 
+// Contain ingredient information
 public class Ingredient {
 	private String name;
 	private double price;
@@ -16,7 +17,8 @@ public class Ingredient {
 	public double getPrice() {
 		return price;
 	}
-	
+
+	// Constructor
 	Ingredient(String name, double price) {
 		this.name = name;
 		this.price = price;

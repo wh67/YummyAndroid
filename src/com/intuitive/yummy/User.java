@@ -1,5 +1,7 @@
 package com.intuitive.yummy;
 
+//Contain user information
+
 public class User {
 	private String username;		//The username of the user
 	private String firstName;		//User First Name
