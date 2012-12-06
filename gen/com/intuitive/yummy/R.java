@@ -16,30 +16,49 @@ public final class R {
     }
     public static final class id {
         public static final int button_login=0x7f070005;
+        public static final int button_menu=0x7f07000d;
         public static final int button_register=0x7f070003;
+        public static final int button_review=0x7f07000e;
         public static final int button_signIn=0x7f070002;
-        public static final int daysOfOperation1Row1=0x7f07000d;
-        public static final int daysOfOperation2Row2=0x7f070011;
+        public static final int currentStatus=0x7f070028;
         public static final int food_type=0x7f070009;
+        public static final int friday=0x7f07001e;
+        public static final int fridayHour=0x7f07001f;
         public static final int header=0x7f070004;
-        public static final int hours1Row1=0x7f07000f;
-        public static final int hours2Row2=0x7f070012;
-        public static final int hoursOfOperation=0x7f07000c;
+        public static final int hoursOfOperation=0x7f07000f;
         public static final int location=0x7f070007;
-        public static final int menu_settings=0x7f070014;
+        public static final int menu_settings=0x7f070029;
+        public static final int monday=0x7f070012;
+        public static final int mondayHour=0x7f070013;
         public static final int password=0x7f070001;
+        public static final int saturday=0x7f070021;
+        public static final int saturdayHour=0x7f070022;
         public static final int search_by_location=0x7f070008;
         public static final int search_by_type=0x7f07000a;
-        public static final int tableRow1=0x7f07000e;
-        public static final int tableRow2=0x7f070010;
+        public static final int status=0x7f070027;
+        public static final int sunday=0x7f070024;
+        public static final int sundayHour=0x7f070025;
+        public static final int tableLayout1=0x7f070010;
+        public static final int tableRow1=0x7f070011;
+        public static final int tableRow2=0x7f070014;
+        public static final int tableRow3=0x7f070017;
+        public static final int tableRow4=0x7f07001a;
+        public static final int tableRow5=0x7f07001d;
+        public static final int tableRow6=0x7f070020;
+        public static final int tableRow7=0x7f070023;
+        public static final int tableRow8=0x7f070026;
         public static final int textView1=0x7f070006;
+        public static final int thursday=0x7f07001b;
+        public static final int thursdayHour=0x7f07001c;
+        public static final int tuesday=0x7f070015;
+        public static final int tuesdayHour=0x7f070016;
         public static final int username=0x7f070000;
-        public static final int vendorDescription=0x7f070013;
+        public static final int vendorDescription=0x7f07000c;
         public static final int vendorName=0x7f07000b;
+        public static final int wednesday=0x7f070018;
+        public static final int wednesdayHour=0x7f070019;
     }
     public static final class id0 {
-        public static final int button_menu=0x7f080001;
-        public static final int button_review=0x7f080002;
         public static final int button_search=0x7f080000;
     }
     public static final class layout {
@@ -68,14 +87,18 @@ public final class R {
         public static final int activity_main_button_search=0x7f040005;
         public static final int activity_main_button_searchNearby=0x7f040004;
         public static final int app_name=0x7f040000;
-        public static final int closed=0x7f04001c;
         public static final int food_type=0x7f04000a;
-        public static final int hours=0x7f04001b;
-        public static final int hours_of_operation=0x7f04001d;
+        public static final int friday=0x7f04001b;
+        public static final int hours_of_operation=0x7f04001e;
         public static final int location=0x7f040009;
         public static final int menu_settings=0x7f040001;
+        public static final int monday=0x7f040017;
+        public static final int saturday=0x7f04001c;
         public static final int search_by_location=0x7f040007;
         public static final int search_by_type=0x7f040008;
+        public static final int status=0x7f04001f;
+        public static final int sunday=0x7f04001d;
+        public static final int thursday=0x7f04001a;
         /**  LoginActivity 
          */
         public static final int title_activity_login=0x7f04000b;
@@ -87,12 +110,10 @@ public final class R {
         /**  VendorActivity 
          */
         public static final int title_activity_vendor=0x7f040014;
-        public static final int vendor1=0x7f040015;
-        public static final int vendor_description=0x7f040018;
-        public static final int view_menu=0x7f040016;
-        public static final int view_review=0x7f040017;
-        public static final int weekdays=0x7f040019;
-        public static final int weekend=0x7f04001a;
+        public static final int tuesday=0x7f040018;
+        public static final int view_menu=0x7f040015;
+        public static final int view_review=0x7f040016;
+        public static final int wednesday=0x7f040019;
     }
     public static final class style {
         public static final int AppTheme=0x7f050000;

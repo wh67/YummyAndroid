@@ -28,14 +28,16 @@
 
     <!-- VendorActivity -->
     <string name="title_activity_vendor">VendorActivity</string>
-    <string name="vendor1">Jack\'s Pizza</string>
     <string name="view_menu">Browse Menu</string>
     <string name="view_review">Read Reviews</string>
-    <string name="vendor_description">We sell pizzas!</string>
-    <string name="weekdays">Monday-Friday</string>
-    <string name="weekend">Saturday/Sunday</string>
-    <string name="hours">8:30 am to 5:00 pm</string>
-    <string name="closed">Closed</string>
-    <string name="hours_of_operation">Hours of operation</string>
+    <string name="monday">Monday:</string>
+    <string name="tuesday">Tuesday:</string>
+    <string name="wednesday">Wednesday:</string>
+    <string name="thursday">Thursday:</string>
+    <string name="friday">Friday:</string>
+    <string name="saturday">Saturday:</string>
+    <string name="sunday">Sunday:</string>
+    <string name="hours_of_operation">Hours of Operation</string>
+    <string name="status">Status:</string>
 
 </resources>
