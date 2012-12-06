@@ -1,8 +1,10 @@
 package com.intuitive.yummy;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 public class VendorActivity extends Activity {
 
@@ -16,5 +18,10 @@ public class VendorActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_vendor, menu);
         return true;
+    }
+    
+    public void viewMenu(View v){
+    	Intent intent = new Intent(this, MenuActivity.class);
+    	startActivity(intent);
     }
 }

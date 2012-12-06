@@ -20,7 +20,8 @@
         android:layout_below="@+id/vendorName"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="@string/view_menu" />
+        android:text="@string/view_menu"
+        android:onClick="viewMenu" />
     
     <Button
         android:id="@+id0/button_review"
