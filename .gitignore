@@ -3,6 +3,9 @@
 bin/*
 gen/*
 
+.classpath
+project.properties
+
 # OS generated files #
 ######################
 .DS_Store
