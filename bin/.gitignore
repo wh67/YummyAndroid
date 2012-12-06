@@ -5,6 +5,8 @@
 *.apk
 *.ap_
 *.dex
+*.png
+*.jar
 
 # OS generated files #
 ######################
