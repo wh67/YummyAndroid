@@ -10,32 +10,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:gravity="center"
+        android:text="@string/vendor1"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-    
-    <TextView
-	    android:id="@+id/vendorDescription"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_marginTop="10dp"
-	    android:layout_alignParentLeft="true"
-	    android:layout_below="@id/vendorName"
-	    android:gravity="center"
-	    android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button_menu"
+        android:id="@+id0/button_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/vendorDescription"
+        android:layout_below="@+id/vendorName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:text="@string/view_menu" />
     
     <Button
-        android:id="@+id/button_review"
+        android:id="@+id0/button_review"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_menu"
+        android:layout_below="@+id0/button_menu"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:text="@string/view_review"/>
@@ -44,157 +35,77 @@
         android:id="@+id/hoursOfOperation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_review"
+        android:layout_below="@+id0/button_review"
+        android:layout_alignBottom="@+id/daysOfOperation1Row1"
         android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
         android:text="@string/hours_of_operation"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    	<TableLayout
-    	    android:id="@+id/tableLayout1"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:layout_below="@id/hoursOfOperation"
-    	    android:layout_centerHorizontal="true"
-    	    android:padding="5dip">
-	        <TableRow
-	            android:id="@+id/tableRow1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hoursOfOperation"
+            android:layout_marginTop="5dp">
 
-	            <TextView
-	                android:id="@+id/monday"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="@string/monday"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/daysOfOperation1Row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/weekdays"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-	            <TextView
-	                android:id="@+id/mondayHour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	        </TableRow>
-	        <TableRow
-	            android:id="@+id/tableRow2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content">
-	            <TextView
-	                android:id="@+id/tuesday"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="@string/tuesday"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	            <TextView
-	                android:id="@+id/tuesdayHour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	       </TableRow>
-	        <TableRow
-	            android:id="@+id/tableRow3"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content">
-	            <TextView
-	                android:id="@+id/wednesday"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="@string/wednesday"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	            <TextView
-	                android:id="@+id/wednesdayHour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	       </TableRow>
-	        <TableRow
-	            android:id="@+id/tableRow4"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content">
-	            <TextView
-	                android:id="@+id/thursday"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="@string/thursday"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	            <TextView
-	                android:id="@+id/thursdayHour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	       </TableRow>
-	        <TableRow
-	            android:id="@+id/tableRow5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content">
-	            <TextView
-	                android:id="@+id/friday"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="@string/friday"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	            <TextView
-	                android:id="@+id/fridayHour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	       </TableRow>
-	        <TableRow
-	            android:id="@+id/tableRow6"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content">
-	            <TextView
-	                android:id="@+id/saturday"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="@string/saturday"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	            <TextView
-	                android:id="@+id/saturdayHour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	       </TableRow>
-	        <TableRow
-	            android:id="@+id/tableRow7"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content">
-	            <TextView
-	                android:id="@+id/sunday"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:text="@string/sunday"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	            <TextView
-	                android:id="@+id/sundayHour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceSmall" />
-	       </TableRow>
-	       <TableRow
-	            	android:id="@+id/tableRow8"
-	           	 	android:layout_width="wrap_content"
-	            	android:layout_height="wrap_content"
-	            	android:layout_marginTop="50dp">
-				<TextView
-				    android:id="@+id/status"
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:text="@string/status"
-				    android:textAppearance="?android:attr/textAppearanceMedium" />
-	            <TextView
-	                android:id="@+id/currentStatus"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_gravity="center_horizontal"
-	                android:textAppearance="?android:attr/textAppearanceMedium" />
-	        </TableRow>
-        </TableLayout>
+            <TextView
+                android:id="@+id/hours1Row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/hours"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+        <TableRow
+            	android:id="@+id/tableRow2"
+           	 	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_below="@+id/tableRow1"
+            	android:layout_marginTop="0dp" >
+
+            <TextView
+                android:id="@+id/daysOfOperation2Row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/weekend"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/hours2Row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal"
+                android:text="@string/closed"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/vendorDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/vendorName"
+            android:gravity="center"
+            android:text="@string/vendor_description"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </RelativeLayout>
