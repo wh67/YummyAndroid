@@ -19,7 +19,7 @@ public class SearchResultsActivity extends ListActivity {
     };
     */
 	
-	Vendor[] vendors = {new Vendor("Jack's Pizza", "", "", null, false),
+	private Vendor[] vendors = {new Vendor("Jack's Pizza", "", "", null, false),
 						new Vendor("Sally's Subs", "", "", null, false),
 						new Vendor("Bob's Burritos", "", "", null, false),
 						new Vendor("Larry's Lasagna", "", "", null, false),
