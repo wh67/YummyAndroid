@@ -13,7 +13,6 @@
     <string name="search_by_type">chinese, american, etc</string>
     <string name="location">Where are you?</string>
     <string name="food_type">What would you like?</string>
-    
 
     <!-- LoginActivity -->
     <string name="title_activity_login">LoginActivity</string>
@@ -37,5 +36,7 @@
     <string name="hours">8:30 am to 5:00 pm</string>
     <string name="closed">Closed</string>
     <string name="hours_of_operation">Hours of operation</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_menu">MenuActivity</string>
 
 </resources>
