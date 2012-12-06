@@ -1,6 +1,7 @@
 # Compiled source #
 ###################
 bin/*
+gen/*
 
 # OS generated files #
 ######################
