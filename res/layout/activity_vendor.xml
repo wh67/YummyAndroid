@@ -29,6 +29,7 @@
         android:layout_below="@id/vendorDescription"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:onClick="viewMenu"
         android:text="@string/view_menu" />
     
     <Button
