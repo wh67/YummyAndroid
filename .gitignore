@@ -6,6 +6,12 @@
 *.ap_
 *.dex
 
+# Package Files #
+bin/*.jar
+bin/*.war
+bin/*.ear
+bin/*.png
+
 # OS generated files #
 ######################
 .DS_Store
