@@ -1,34 +1,38 @@
 package com.intuitive.yummy;
 
 import android.app.ListActivity;
+import android.content.Intent;
 //import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 
 public class MenuActivity extends ListActivity {
-
-	private String[] values = new String[] {
-			"16 inch Cheese Pizza", 
-            "16 inch Pepperoni Pizza", 
-            "16 inch Sausage Pizza",
-			"Cheese Pizza Slice",
-    		"Pepperoni Pizza Slice", 
-    		"Sausage Pizza Slice",
-            "Pizza Cheesteak",
-            "Chicken Cheesteak",
-            "Pepsi 2 liter",
-            "Coca-Cola 2 liter"
-    };
+	private com.intuitive.yummy.Menu menu;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        //Intent intent = getIntent();
+        Intent intent = getIntent();
+        menu = (com.intuitive.yummy.Menu)intent.getSerializableExtra("Menu");
+        String[] menuItemsName;
+        if (menu.getMenuItem().size() == 0)
+        {
+        	menuItemsName = new String[1];
+        	menuItemsName[0] = "No item available.";
+        }
+        else
+        {
+        	menuItemsName = new String[menu.getMenuItem().size()];
+	        for (int i = 0; i < menu.getMenuItem().size(); i++)
+	        {
+	        	menuItemsName[i] = menu.getMenuItem().get(i).getName();
+	        }
+        }
         
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-        		android.R.layout.simple_list_item_1, values);
+        		android.R.layout.simple_list_item_1, menuItemsName);
         setListAdapter(adapter);
     }
 

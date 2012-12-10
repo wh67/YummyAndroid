@@ -1,12 +1,14 @@
 package com.intuitive.yummy;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 //includes menu item information, includes their ingredients' information
 
-public class MenuItem {
+public class MenuItem implements Serializable {
 	private String name;
 	private double price;
+	private String category;
 	private ArrayList<Ingredient> ingredients = new ArrayList<Ingredient>();
 	
 	public void setName(String name) {
@@ -14,6 +16,9 @@ public class MenuItem {
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	public void setIngredient(ArrayList<Ingredient> ingredients) {
 		this.ingredients = ingredients;
@@ -30,13 +35,17 @@ public class MenuItem {
 	public double getPrice() {
 		return price;
 	}
+	public String getCategory() {
+		return category;
+	}
 	public ArrayList<Ingredient> getIngredient() {
 		return ingredients;
 	}
 	
-	MenuItem(String name, double price, ArrayList<Ingredient> ingredients) {
+	MenuItem(String name, double price, String category, ArrayList<Ingredient> ingredients) {
 		this.name = name;
 		this.price = price;
+		this.category = category;
 		this.ingredients = ingredients;
 	}
 	

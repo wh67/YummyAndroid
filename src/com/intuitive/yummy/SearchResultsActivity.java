@@ -1,5 +1,7 @@
 package com.intuitive.yummy;
 
+import java.util.ArrayList;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,13 +16,13 @@ public class SearchResultsActivity extends ListActivity {
 	
 	//dummy data for vendors
 	private Vendor[] vendors = {
-			new Vendor("Jack's Pizza", "We sell Pizzas!", "", new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false),
-			new Vendor("Sally's Subs", "Welcome to Sally's Subs", "",  new int[][] {{830,1800}, {830,1800}, {830,1800}, {830,1800}, {830,1800}, {0,0}, {0,0}}, false),
-			new Vendor("Bob's Burritos", "Hello from Bob's Burritos", "",  new int[][] {{900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1900}, {900,1900}}, false),
-			new Vendor("Larry's Lasagna", "Welcome to Bob's Burritos", "",  new int[][] {{800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,2000}, {800,2000}}, false),
-			new Vendor("Helga's Hell Kitchen", "Hello from Helga's Hell Kitchen", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {0,0}}, false),
-			new Vendor("Carlos' Cuisine", "Welcome to Carlos' Cuisine", "",  new int[][] {{0,0}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}}, false),
-			new Vendor("Isabel's Ice Cream", "Isabel's Ice Cream\nThe Best Ice Cream In The World", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {900,1800}}, false)
+			new Vendor("Jack's Pizza", "We sell Pizzas!", "", new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor("Sally's Subs", "Welcome to Sally's Subs", "",  new int[][] {{830,1800}, {830,1800}, {830,1800}, {830,1800}, {830,1800}, {0,0}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor("Bob's Burritos", "Hello from Bob's Burritos", "",  new int[][] {{900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1900}, {900,1900}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor("Larry's Lasagna", "Welcome to Bob's Burritos", "",  new int[][] {{800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,2000}, {800,2000}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor("Helga's Hell Kitchen", "Hello from Helga's Hell Kitchen", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor("Carlos' Cuisine", "Welcome to Carlos' Cuisine", "",  new int[][] {{0,0}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor("Isabel's Ice Cream", "Isabel's Ice Cream\nThe Best Ice Cream In The World", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {900,1800}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>()))
 			};
 	
     @Override
@@ -32,6 +34,17 @@ public class SearchResultsActivity extends ListActivity {
     		values[i] = vendors[i].getName();
     	}
     	
+    	vendors[0].getMenu().addMenuItem(new MenuItem("16 inch Cheese Pizza", 10, "Pizza", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("16 inch Pepperoni Pizza", 11, "Pizza", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("16 inch Sausage Pizza", 12, "Pizza", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("Cheese Pizza Slice", 1.5, "Pizza", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("Pepperoni Pizza Slice", 1.65, "Pizza", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("Sausage Pizza Slice", 1.75, "Pizza", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("Pizza Cheesesteak", 5, "Cheesesteak", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("Chicken Cheesesteak", 6, "Cheesesteak", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("Pepsi 2 Liter", 2.5, "Drink", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem("Coca-Cola 2 Liter", 2.5, "Drink", null));
+    	    	
         super.onCreate(savedInstanceState);
         
         Intent intent = getIntent();
@@ -54,8 +67,7 @@ public class SearchResultsActivity extends ListActivity {
     	Vendor vendor = vendors[position];
     	Intent intent = new Intent(this, VendorActivity.class);
     	intent.putExtra("Vendor", vendor);
-    	startActivity(intent);
-    	
+    	startActivity(intent);    	
     }
     
 }

@@ -10,6 +10,7 @@ public class Vendor implements Serializable {
 	private String address;
 	private int[][] hours;
 	private boolean status;
+	private Menu menu;
 	
 	public void setName(String name) {
 		this.name = name;
@@ -29,6 +30,9 @@ public class Vendor implements Serializable {
 	public void closeTruck() {
 		status = false;
 	}
+	public void setMenu(Menu menu) {
+		this.menu = menu;
+	}
 	public String getName() {
 		return name;
 	}
@@ -44,13 +48,17 @@ public class Vendor implements Serializable {
 	public boolean getStatus() {
 		return status;
 	}
+	public Menu getMenu() {
+		return menu;
+	}
 	
 	//constructor
-	Vendor (String name, String description, String address, int[][] hours, boolean status) {
+	Vendor (String name, String description, String address, int[][] hours, boolean status, Menu menu) {
 		this.name = name;
 		this.description = description;
 		this.address = address;
 		this.hours = hours;
 		this.status = status;
+		this.menu = menu;
 	}
 }

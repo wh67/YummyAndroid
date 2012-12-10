@@ -1,13 +1,14 @@
 package com.intuitive.yummy;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 //Contain menu information includes a list of menu items
 
-public class Menu {
+public class Menu implements Serializable {
 	private ArrayList<MenuItem> menuItems = new ArrayList<MenuItem>();
 	
-	public void setMenu(ArrayList<MenuItem> menuItems) {
+	public void setMenuItem(ArrayList<MenuItem> menuItems) {
 		this.menuItems = menuItems;
 	}
 	public void addMenuItem(MenuItem menuItem) {
@@ -16,7 +17,7 @@ public class Menu {
 	public void removeMenuItem(MenuItem menuItem) {
 		menuItems.remove(menuItem);
 	}
-	public ArrayList<MenuItem> getMenu() {
+	public ArrayList<MenuItem> getMenuItem() {
 		return menuItems;
 	}
 	

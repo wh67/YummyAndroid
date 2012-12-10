@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class VendorActivity extends Activity {
+	private Vendor vendor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -15,7 +16,7 @@ public class VendorActivity extends Activity {
         setContentView(R.layout.activity_vendor);
         //Get the data that is being passed by the parent activity, in this case, vendor
         Intent intent = getIntent();
-        Vendor vendor = (Vendor)intent.getSerializableExtra("Vendor");
+        vendor = (Vendor)intent.getSerializableExtra("Vendor");
         
         String name = vendor.getName();
         String description = vendor.getDescription();
@@ -111,6 +112,7 @@ public class VendorActivity extends Activity {
     
     public void viewMenu(View v){
     	Intent intent = new Intent(this, MenuActivity.class);
+    	intent.putExtra("Menu", vendor.getMenu());
     	startActivity(intent);
-    }
+   }
 }
