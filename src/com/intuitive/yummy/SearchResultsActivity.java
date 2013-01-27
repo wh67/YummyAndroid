@@ -34,16 +34,16 @@ public class SearchResultsActivity extends ListActivity {
     		values[i] = vendors[i].getName();
     	}
     	
-    	vendors[0].getMenu().addMenuItem(new MenuItem("16 inch Cheese Pizza", 10, "Pizza", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("16 inch Pepperoni Pizza", 11, "Pizza", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("16 inch Sausage Pizza", 12, "Pizza", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("Cheese Pizza Slice", 1.5, "Pizza", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("Pepperoni Pizza Slice", 1.65, "Pizza", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("Sausage Pizza Slice", 1.75, "Pizza", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("Pizza Cheesesteak", 5, "Cheesesteak", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("Chicken Cheesesteak", 6, "Cheesesteak", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("Pepsi 2 Liter", 2.5, "Drink", null));
-    	vendors[0].getMenu().addMenuItem(new MenuItem("Coca-Cola 2 Liter", 2.5, "Drink", null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(1, "16 inch Cheese Pizza", 10, "Pizza", "Plain Cheese Pizza", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(2, "16 inch Pepperoni Pizza", 11, "Pizza", "Pizza with Pepperoni Topping", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(3, "16 inch Sausage Pizza", 12, "Pizza", "Pizza with Sausage", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(4, "Cheese Pizza Slice", 1.5, "Pizza", "Plain Cheese Pizza (slice)", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(5, "Pepperoni Pizza Slice", 1.65, "Pizza", "Pizza with Pepperoni Topping (slice)", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(6, "Sausage Pizza Slice", 1.75, "Pizza", "Pizza with Sausage (slice)", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(7, "Pizza Cheesesteak", 5, "Cheesesteak", "Cheesesteak filled with pizza topping", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(8, "Chicken Cheesesteak", 6, "Cheesesteak", "Cheesesteak filled with chicken", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(9, "Pepsi 2 Liter", 2.5, "Drink", "2 Liter Pepsi", true, null));
+    	vendors[0].getMenu().addMenuItem(new MenuItem(10, "Coca-Cola 2 Liter", 2.5, "Drink", "2 Liter Coca-Cola", true, null));
     	    	
         super.onCreate(savedInstanceState);
         
