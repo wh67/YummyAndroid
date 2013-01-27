@@ -16,13 +16,13 @@ public class SearchResultsActivity extends ListActivity {
 	
 	//dummy data for vendors
 	private Vendor[] vendors = {
-			new Vendor("Jack's Pizza", "We sell Pizzas!", "", new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
-			new Vendor("Sally's Subs", "Welcome to Sally's Subs", "",  new int[][] {{830,1800}, {830,1800}, {830,1800}, {830,1800}, {830,1800}, {0,0}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
-			new Vendor("Bob's Burritos", "Hello from Bob's Burritos", "",  new int[][] {{900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1900}, {900,1900}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
-			new Vendor("Larry's Lasagna", "Welcome to Bob's Burritos", "",  new int[][] {{800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,2000}, {800,2000}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
-			new Vendor("Helga's Hell Kitchen", "Hello from Helga's Hell Kitchen", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
-			new Vendor("Carlos' Cuisine", "Welcome to Carlos' Cuisine", "",  new int[][] {{0,0}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
-			new Vendor("Isabel's Ice Cream", "Isabel's Ice Cream\nThe Best Ice Cream In The World", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {900,1800}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>()))
+			new Vendor(1, "Jack's Pizza", "We sell Pizzas!", "", new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {0,0}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor(2, "Sally's Subs", "Welcome to Sally's Subs", "",  new int[][] {{830,1800}, {830,1800}, {830,1800}, {830,1800}, {830,1800}, {0,0}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor(3, "Bob's Burritos", "Hello from Bob's Burritos", "",  new int[][] {{900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1700}, {900,1900}, {900,1900}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor(4, "Larry's Lasagna", "Welcome to Bob's Burritos", "",  new int[][] {{800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,1700}, {800,2000}, {800,2000}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor(5, "Helga's Hell Kitchen", "Hello from Helga's Hell Kitchen", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {0,0}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor(6, "Carlos' Cuisine", "Welcome to Carlos' Cuisine", "",  new int[][] {{0,0}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>())),
+			new Vendor(7, "Isabel's Ice Cream", "Isabel's Ice Cream\nThe Best Ice Cream In The World", "",  new int[][] {{830,1700}, {830,1700}, {830,1700}, {830,1700}, {830,1700}, {900,1800}, {900,1800}}, false, new com.intuitive.yummy.Menu(new ArrayList<MenuItem>()))
 			};
 	
     @Override

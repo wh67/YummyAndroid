@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.intuitive.yummy"
     android:versionCode="1"
@@ -12,7 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.intuitive.yummy.MainActivity"
             android:label="@string/title_activity_main" >
             <intent-filter android:label="@string/app_name" >
                 <action android:name="android.intent.action.MAIN" />
@@ -21,29 +22,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.intuitive.yummy.LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
         <activity
-            android:name=".SearchActivity"
+            android:name="com.intuitive.yummy.SearchActivity"
             android:label="@string/title_activity_search" >
         </activity>
         <activity
-            android:name=".SearchResultsActivity"
+            android:name="com.intuitive.yummy.SearchResultsActivity"
             android:label="@string/title_activity_search_results" >
         </activity>
         <activity
-            android:name=".VendorActivity"
+            android:name="com.intuitive.yummy.VendorActivity"
             android:label="@string/title_activity_vendor" >
         </activity>
         <activity
-            android:name=".MenuActivity"
+            android:name="com.intuitive.yummy.MenuActivity"
             android:label="@string/title_activity_menu" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.intuitive.yummy.VendorAdminAccountActivity"
+            android:label="@string/title_activity_vender_admin_account" >
+        </activity>
+        <activity
+            android:name="com.intuitive.yummy.RegisterActivity"
+            android:label="@string/title_activity_register" >
         </activity>
     </application>
 
