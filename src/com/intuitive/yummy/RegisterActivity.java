@@ -19,16 +19,21 @@ public class RegisterActivity extends Activity {
 	EditText username, password1, password2, firstname, lastname, phone, email;
 	Pattern pattern;
 	Matcher matcher;
-	final String USERNAME_PATTERN = "((?=.*[a-z]).{8,20})";
-	final String PASSWORD_PATTERN = "((?=.*[A-Z])(?=.*[a-z])(?=.*\\d).{8,20})";
+	// Patterns for error checking in register page
+	// Username has to be 6 to 20 characters and must contain at least one lower-case letter
+	final String USERNAME_PATTERN = "((?=.*[a-z]).{6,20})";
+	// Password has to be 8 characters or above and must contain at least one upper-case letter,
+	// one lower-case letter, and one digit
+	final String PASSWORD_PATTERN = "((?=.*[A-Z])(?=.*[a-z])(?=.*\\d).{8,})";
+	// Name cannot contain any digit
 	final String NAME_PATTERN = "[^0-9]*";
+	// Phone number must be in the format of 123-456-7890
 	final String PHONE_PATTERN = "^(\\d{3}-{1}\\d{3}-{1}\\d{4})$";
+	// Email must be in correct format, xxx@yyy.zzz
 	final String EMAIL_PATTERN = "^[A-Za-z0-9]+(\\.[_A-Za-z0-9-]+)*[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_register);
+	// Initialize all the formats in the page and button listeners
+	private void init() {
 		required1 = (TextView)findViewById(R.id.required1);
 		required1.setTextColor(Color.parseColor("#FF0000"));
 		required1.setVisibility(TextView.INVISIBLE);
@@ -66,6 +71,13 @@ public class RegisterActivity extends Activity {
         	}
         });
 	}
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_register);
+		init();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -75,6 +87,7 @@ public class RegisterActivity extends Activity {
 	}
 	
 	public void checkRegistration(View v) {
+		// Clear the '!' and the check status when user click on the register button
 		resetCheck();
 
 		if (!checkAllCompleted()) {
@@ -116,6 +129,7 @@ public class RegisterActivity extends Activity {
 		required7.setVisibility(TextView.INVISIBLE);
 	}
 	
+	// Check to make sure all fields are completed
 	private boolean checkAllCompleted() {
 		boolean allCompleted = true;
 		if (username.getText().toString().isEmpty()) {
@@ -149,44 +163,50 @@ public class RegisterActivity extends Activity {
 		return allCompleted;
 	}
 	
+	// Check using patterns to make sure username is in valid format
 	private boolean checkValidUsername() {
 		pattern = Pattern.compile(USERNAME_PATTERN);
 		matcher = pattern.matcher(username.getText().toString());
 		return matcher.matches();
 	}
 
+	// Check using patterns to make sure password is in valid format
 	private boolean checkValidPassword() {
 		pattern = Pattern.compile(PASSWORD_PATTERN);
 		matcher = pattern.matcher(password1.getText().toString());
 		return matcher.matches();
 	}
 	
+	// Check to make sure both passwords entered is match
 	private boolean checkPasswordMatch() {
 		return password1.getText().toString().equals(password2.getText().toString());
 	}
 
+	// Check to make sure first name is in valid format
 	private boolean checkValidFirstname() {
 		pattern = Pattern.compile(NAME_PATTERN);
 		matcher = pattern.matcher(firstname.getText().toString());
 		return matcher.matches();
 	}
 	
+	// Check to make sure last name is in valid format
 	private boolean checkValidLastname() {
 		pattern = Pattern.compile(NAME_PATTERN);
 		matcher = pattern.matcher(lastname.getText().toString());
 		return matcher.matches();
 	}
 	
+	// Check to make sure phone number is in valid format
 	private boolean checkValidPhone() {
 		pattern = Pattern.compile(PHONE_PATTERN);
 		matcher = pattern.matcher(phone.getText().toString());
 		return matcher.matches();
 	}
 	
+	// Check to make sure the email is in valid format
 	private boolean checkValidEmail() {
 		pattern = Pattern.compile(EMAIL_PATTERN);
 		matcher = pattern.matcher(email.getText().toString());
 		return matcher.matches();
 	}
-	
 }
