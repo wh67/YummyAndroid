@@ -2,9 +2,11 @@ package com.intuitive.yummy;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class VendorActivity extends Activity {
@@ -20,6 +22,7 @@ public class VendorActivity extends Activity {
         
         String name = vendor.getName();
         String description = vendor.getDescription();
+
         //String address;
         String status;
         if (vendor.getStatus())
@@ -100,6 +103,10 @@ public class VendorActivity extends Activity {
         vendorName.setText(name);
         TextView vendorDescription = (TextView) findViewById(R.id.vendorDescription);
         vendorDescription.setText(description);
+        ImageView vendorPicture = (ImageView) findViewById(R.id.vendorPicture);
+        if (vendor.getPictureURL() != null) {
+        	vendorPicture.setImageBitmap(BitmapFactory.decodeFile(vendor.getPictureURL()));
+        }
         TextView vendorStatus = (TextView) findViewById(R.id.currentStatus);
         vendorStatus.setText(status); 
     }

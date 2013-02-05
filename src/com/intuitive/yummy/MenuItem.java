@@ -12,6 +12,7 @@ public class MenuItem implements Serializable {
 	private String category;
 	private String description;
 	private boolean availability;
+	private String pictureURL;
 	private ArrayList<Ingredient> ingredients = new ArrayList<Ingredient>();
 	
 	public void setID(int id) {
@@ -31,6 +32,9 @@ public class MenuItem implements Serializable {
 	}
 	public void setAvailability(boolean availability) {
 		this.availability = availability;
+	}
+	public void setPictureURL(String pictureURL) {
+		this.pictureURL = pictureURL;
 	}
 	public void setIngredient(ArrayList<Ingredient> ingredients) {
 		this.ingredients = ingredients;
@@ -59,17 +63,21 @@ public class MenuItem implements Serializable {
 	public boolean getAvailability() {
 		return availability;
 	}
+	public String getPictureURL() {
+		return pictureURL;
+	}
 	public ArrayList<Ingredient> getIngredient() {
 		return ingredients;
 	}
 	
-	MenuItem(int id, String name, double price, String category, String description, boolean availability, ArrayList<Ingredient> ingredients) {
+	MenuItem(int id, String name, double price, String category, String description, boolean availability, String pictureURL, ArrayList<Ingredient> ingredients) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.category = category;
 		this.description = description;
 		this.availability = availability;
+		this.pictureURL = pictureURL;
 		this.ingredients = ingredients;
 	}
 	

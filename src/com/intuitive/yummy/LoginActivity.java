@@ -42,6 +42,7 @@ public class LoginActivity extends Activity {
     	String enteredPassword = ((EditText)findViewById(R.id.password)).getText().toString();
     	if (enteredUsername.equals(user) && enteredPassword.equals(pass)) {
         	Intent intent = new Intent(this, VendorAdminAccountActivity.class);
+        	intent.putExtra("Activity", "Login");
         	startActivity(intent);
     	} else {
     		Toast.makeText(getApplicationContext(), "Username/Password incorrect.", Toast.LENGTH_SHORT).show();
