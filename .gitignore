@@ -20,3 +20,5 @@ Thumbs.db
 gen/com/intuitive/yummy/R.java
 
 .classpath
+project.properties
+gen/com/intuitive/yummy/BuildConfig.java
