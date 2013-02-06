@@ -11,8 +11,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
-	private String user = "demoVendor";
-	private String pass = "demoVendorPW";
+	private String user = "username";
+	private String pass = "password";
 	Button cancel;
 	EditText userName, passWord;
 
