@@ -1,0 +1,220 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    tools:context=".RegisterActivity" >
+	
+	    <TextView
+	        android:id="@+id/register_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="20dp"
+	        android:text="@string/register_label" />
+	
+	    <TextView
+	        android:id="@+id/register_username"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/username_field"
+	        android:layout_below="@+id/register_label"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/username_label" />
+	
+	    <TextView
+	        android:id="@+id/required1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/register_username"
+	        android:layout_alignTop="@+id/register_username"
+	        android:text="@string/required" />
+	
+	    <EditText
+	        android:id="@+id/username_field"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/register_username"
+	        android:ems="10"
+	        android:inputType="text" />
+	    
+	    <TextView
+	        android:id="@+id/register_password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/password_field"
+	        android:layout_below="@+id/username_field"
+	        android:text="@string/password_label" />
+	
+	    <TextView
+	        android:id="@+id/required2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/register_password"
+	        android:layout_alignTop="@+id/register_password"
+	        android:text="@string/required" />
+	
+	    <EditText
+	        android:id="@+id/password_field"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/register_password"
+	        android:layout_centerHorizontal="true"
+	        android:ems="10"
+	        android:inputType="textPassword" />
+	
+	    <TextView
+	        android:id="@+id/register_reenter_password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/username_field"
+	        android:layout_below="@+id/password_field"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/reenter_password_label" />
+	
+	    <TextView
+	        android:id="@+id/required3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/register_reenter_password"
+	        android:layout_alignTop="@+id/register_reenter_password"
+	        android:text="@string/required" />
+	
+	    <EditText
+	        android:id="@+id/reenter_password_field"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/register_reenter_password"
+	        android:ems="10"
+	        android:inputType="textPassword" />
+	    
+	    <TextView
+	        android:id="@+id/register_firstname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/firstname_field"
+	        android:layout_below="@+id/reenter_password_field"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/firstname_label" />
+	
+	    <TextView
+	        android:id="@+id/required4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/register_firstname"
+	        android:layout_alignTop="@+id/register_firstname"
+	        android:text="@string/required" />
+	    
+	    <TextView
+	        android:id="@+id/register_lastname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/lastname_field"
+	        android:layout_below="@+id/reenter_password_field"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/lastname_label" />
+	
+	    <TextView
+	        android:id="@+id/required5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/register_lastname"
+	        android:layout_alignTop="@+id/register_lastname"
+	        android:text="@string/required" />
+	    
+	    	    	    <EditText
+	        android:id="@+id/firstname_field"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/reenter_password_field"
+	        android:layout_below="@+id/register_firstname"
+	        android:ems="6"
+	        android:inputType="textCapWords" />
+	    
+	    <EditText
+	        android:id="@+id/lastname_field"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignRight="@+id/reenter_password_field"
+	        android:layout_toRightOf="@+id/firstname_field"
+	        android:layout_below="@+id/register_lastname"
+	        android:ems="4"
+	        android:inputType="textCapWords" />
+	    
+	    <TextView
+	        android:id="@+id/register_phone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/phone_field"
+	        android:layout_below="@+id/lastname_field"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/phone_label" />
+	
+	    <TextView
+	        android:id="@+id/required6"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/register_phone"
+	        android:layout_alignTop="@+id/register_phone"
+	        android:text="@string/required" />
+	    
+	    <EditText
+	        android:id="@+id/phone_field"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/register_phone"
+	        android:ems="10"
+	        android:inputType="phone"
+	        android:hint="@string/phone_hint" />
+	    
+	    <TextView
+	        android:id="@+id/register_email"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/email_field"
+	        android:layout_below="@+id/phone_field"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/email_label" />
+	
+	    <TextView
+	        android:id="@+id/required7"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/register_email"
+	        android:layout_alignTop="@+id/register_email"
+	        android:text="@string/required" />
+	    
+	    <EditText
+	        android:id="@+id/email_field"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/register_email"
+	        android:ems="10"
+	        android:inputType="textEmailAddress" />
+	    
+	    <Button
+	        android:id="@+id/button_register"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/email_field"
+	        android:layout_alignLeft="@+id/email_field"
+	        android:onClick="checkRegistration"
+	        android:text="@string/register" />
+	    
+	    <Button
+	        android:id="@+id/button_register_cancel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/email_field"
+	        android:layout_alignRight="@+id/email_field"
+	        android:layout_toRightOf="@+id/button_register"
+	        android:text="@string/cancel" />
+
+	    	</RelativeLayout>
+</ScrollView>

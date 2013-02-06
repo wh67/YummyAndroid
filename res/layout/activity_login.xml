@@ -3,13 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/activity_login_textView_signIn" />
+
     <EditText
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/header"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="20dp"
         android:ems="10" 
         android:hint="@string/activity_login_hint_username">
 
@@ -31,24 +39,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
-        android:layout_centerHorizontal="true"
-        android:text="@string/activity_login_button_signIn" />
+        android:layout_alignLeft="@+id/password"
+        android:onClick="checkUser"
+        android:text="@string/login" />
     
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_alignRight="@+id/password"
+        android:layout_toRightOf="@+id/button_signIn"
+        android:onClick="cancel"
+        android:text="@string/cancel" />
+
     <Button
         android:id="@+id/button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_signIn"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignRight="@+id/password"
         android:layout_centerHorizontal="true"
-        android:text="@string/activity_login_button_register" />
-
-    <TextView
-        android:id="@+id/header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/username"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="84dp"
-        android:text="@string/activity_login_textView_signIn" />
+        android:onClick="register"
+        android:text="@string/register" />
 
 </RelativeLayout>

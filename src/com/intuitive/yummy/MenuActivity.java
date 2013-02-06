@@ -17,7 +17,12 @@ public class MenuActivity extends ListActivity {
         Intent intent = getIntent();
         menu = (com.intuitive.yummy.Menu)intent.getSerializableExtra("Menu");
         String[] menuItemsName;
-        if (menu.getMenuItem().size() == 0)
+        if (menu == null)
+        {
+        	menuItemsName = new String[1];
+        	menuItemsName[0] = "No menu available.";
+        }
+        else if (menu.getMenuItem().size() == 0)
         {
         	menuItemsName = new String[1];
         	menuItemsName[0] = "No item available.";

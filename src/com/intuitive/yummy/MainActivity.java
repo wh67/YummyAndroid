@@ -26,8 +26,10 @@ public class MainActivity extends Activity {
     }
     
     public void register(View v){
-    	/** TODO */
+    	Intent intent = new Intent(this, RegisterActivity.class);
+    	startActivity(intent);
     }
+    
     public void searchNearby(View v){
     	Intent intent = new Intent(this, SearchResultsActivity.class);
     	intent.putExtra("criteria", "nearby");

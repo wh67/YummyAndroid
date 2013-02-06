@@ -5,13 +5,18 @@ import java.io.Serializable;
 //Contain vendor's information
 
 public class Vendor implements Serializable {
+	private int id;
 	private String name;
 	private String description;
 	private String address;
 	private int[][] hours;
 	private boolean status;
+	private String pictureURL;
 	private Menu menu;
 	
+	public void setID(int id) {
+		this.id = id;
+	}
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -30,8 +35,14 @@ public class Vendor implements Serializable {
 	public void closeTruck() {
 		status = false;
 	}
+	public void setPictureURL(String pictureURL) {
+		this.pictureURL = pictureURL;
+	}
 	public void setMenu(Menu menu) {
 		this.menu = menu;
+	}
+	public int getID() {
+		return id;
 	}
 	public String getName() {
 		return name;
@@ -48,17 +59,22 @@ public class Vendor implements Serializable {
 	public boolean getStatus() {
 		return status;
 	}
+	public String getPictureURL() {
+		return pictureURL;
+	}
 	public Menu getMenu() {
 		return menu;
 	}
 	
 	//constructor
-	Vendor (String name, String description, String address, int[][] hours, boolean status, Menu menu) {
+	Vendor (int id, String name, String description, String address, int[][] hours, boolean status, String pictureURL, Menu menu) {
+		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.address = address;
 		this.hours = hours;
 		this.status = status;
+		this.pictureURL = pictureURL;
 		this.menu = menu;
 	}
 }

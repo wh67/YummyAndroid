@@ -1,0 +1,483 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_gravity="center_horizontal">
+	    <TextView
+	        android:id="@+id/editGeneralInformation"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="@string/edit_general_information"
+	        android:layout_marginTop="10dp"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	    <RelativeLayout
+	        android:layout_width="273dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="20dp" >
+    	    <TextView
+    	        android:id="@+id/name_label"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:layout_alignBaseline="@+id/name_field"
+    	        android:layout_alignBottom="@+id/name_field"
+    	        android:layout_alignParentLeft="true"
+    	        android:text="@string/edit_name_label" />
+		    <EditText
+		        android:id="@+id/name_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentTop="true"
+		        android:ems="9"
+		        android:inputType="text" />
+    	    <TextView
+    	        android:id="@+id/description_label"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:layout_alignBaseline="@+id/description_field"
+    	        android:layout_alignBottom="@+id/description_field"
+    	        android:layout_alignParentLeft="true"
+    	        android:text="@string/edit_description_label" />
+		    <EditText
+		        android:id="@+id/description_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/name_field"
+		        android:layout_alignParentRight="true"
+		        android:ems="9"
+		        android:inputType="text" />
+		    <TextView
+    	        android:id="@+id/location_label"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:layout_alignBaseline="@+id/location_field"
+    	        android:layout_alignBottom="@+id/location_field"
+    	        android:layout_alignParentLeft="true"
+    	        android:text="@string/edit_location_label" />
+		    <EditText
+		        android:id="@+id/location_field"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:ems="9"
+		        android:layout_centerHorizontal="true"
+		        android:layout_alignLeft="@id/name_field"
+		        android:layout_below="@id/description_field"
+		        android:inputType="text" />
+    	    <TextView
+    	        android:id="@+id/status_label"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:layout_alignBaseline="@+id/status_field"
+    	        android:layout_alignBottom="@+id/status_field"
+    	        android:layout_alignParentLeft="true"
+    	        android:text="@string/edit_status_label" />
+    	    <ToggleButton
+    	        android:id="@+id/status_field"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:layout_below="@+id/location_field"
+    	        android:layout_centerHorizontal="true"
+    	        android:onClick="changeStatus"
+    	        android:textOff="@string/testOff"
+    	        android:textOn="@string/textOn" />
+	    </RelativeLayout>
+	    <TextView
+	        android:id="@+id/hour_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:text="@string/edit_hours_label" />
+	   	<TableLayout
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_gravity="center"
+	   	    android:padding="5dip">
+	        <TableRow
+	           	 	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content" >
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:layout_span="8"
+	                android:text="@string/format" />
+	        </TableRow>
+	        <TableRow
+	           	 	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content" >
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:layout_span="8"
+	                android:text="@string/closeHint" />
+	        </TableRow>
+	        	   	    <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/monday"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/monday"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            <EditText
+	                android:id="@+id/monOpenHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/monOpenMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	             <TextView
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:text="@string/to"
+	                 android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/monCloseHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/monCloseMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            </TableRow>
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/tuesday"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/tuesday"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            <EditText
+	                android:id="@+id/tuesOpenHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/tuesOpenMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/to"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/tuesCloseHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/tuesCloseMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	       </TableRow>
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/wednesday"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/wednesday"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            <EditText
+	                android:id="@+id/wedOpenHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/wedOpenMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/to"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/wedCloseHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/wedCloseMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	       </TableRow>
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/thursday"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/thursday"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            <EditText
+	                android:id="@+id/thursOpenHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/thursOpenMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/to"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/thursCloseHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/thursCloseMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	       </TableRow>
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/friday"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/friday"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            <EditText
+	                android:id="@+id/friOpenHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/friOpenMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/to"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/friCloseHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/friCloseMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	       </TableRow>
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/saturday"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/saturday"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            <EditText
+	                android:id="@+id/satOpenHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/satOpenMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/to"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/satCloseHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/satCloseMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	       </TableRow>
+	        <TableRow
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content">
+	            <TextView
+	                android:id="@+id/sunday"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/sunday"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            <EditText
+	                android:id="@+id/sunOpenHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/sunOpenMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/to"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/sunCloseHour"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/semi"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	             <EditText
+	                android:id="@+id/sunCloseMinute"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="2"
+	                android:inputType="number" />
+	       </TableRow>
+	       </TableLayout>
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_gravity="center_horizontal" >
+		    <Button
+		        android:id="@+id/button_save"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+		        android:onClick="save"
+		        android:text="@string/save" />
+		    <Button
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+		        android:onClick="cancel"
+		        android:text="@string/cancel" />
+	    </LinearLayout>
+	</LinearLayout>
+</ScrollView>
