@@ -108,7 +108,7 @@ public class VendorActivity extends Activity {
         	vendorPicture.setImageBitmap(BitmapFactory.decodeFile(vendor.getPictureURL()));
         }
         TextView vendorStatus = (TextView) findViewById(R.id.currentStatus);
-        vendorStatus.setText(status); 
+        vendorStatus.setText(status);
     }
 
     @Override
