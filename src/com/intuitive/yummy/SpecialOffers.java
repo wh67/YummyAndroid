@@ -3,44 +3,44 @@ package com.intuitive.yummy;
 import java.io.Serializable;
 
 public class SpecialOffers implements Serializable {
-	private MenuItem MenuItem;
+	private MenuItem menuItem;
 	private double Price = 0;
 	private int Duration = 0;
 	
 	//Set MenuItem on a Special Offer
 	public void setMenuItem(MenuItem Item){
-		this.MenuItem = Item;
+		menuItem = Item;
 	}
 	
 	//Set price of Special Offer
 	public void setPrice(double price){
-		this.Price = price;
+		Price = price;
 	}
 	
 	//Set duration of Special Offer
 	public void setDuration(int duration){
-		this.Duration = duration;
+		Duration = duration;
 	}
 	
 	//Return MenuItem of Special Offer
 	public MenuItem getMenuItem(){
-		return this.MenuItem;
+		return menuItem;
 	}
 	
 	//Return price of Special Offer
 	public double getPrice(){
-		return this.Price;
+		return Price;
 	}
 	
 	//Return duration of Special Offer
 	public int getDuration(){
-		return this.Duration;
+		return Duration;
 	}
 	
 	//Constructor
 	SpecialOffers(MenuItem Item, double price, int duration){
-		this.MenuItem = Item;
-		this.Price = price;
-		this.Duration = duration;
+		menuItem = Item;
+		Price = price;
+		Duration = duration;
 	}
 }

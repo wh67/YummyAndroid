@@ -7,66 +7,52 @@ public class Cart implements Serializable {
 	
 	private ArrayList<MenuItem> Items = new ArrayList<MenuItem>();
 	private double totalprice = 0;
-	private boolean IsSure = false;
 	
 	//Set the array of items in the cart
 	public void setItems(ArrayList<MenuItem> Item){
-		this.Items = Item;
+		Items = Item;
 	}
 	
-	//Set the total price of all items
-	public void setTotalPrice(ArrayList<MenuItem> Item, double price){
-		for(int i = 0; i < Item.size(); i++){
-			price += Item.get(i).getPrice();
-		}
+	//Update the total price of all items
+	private void updateTotalPrice() {
+		totalprice = 0;
 		
-		this.totalprice = price;
+		for (int i = 0; i < Items.size(); i++) {
+			totalprice += Items.get(i).getPrice();
+		}
 	}
 	
 	//Return the items in the cart
 	public ArrayList<MenuItem> getItems(){
-		return this.Items;
-	}
-	
-	//Return individual item in the cart
-	public double getPrice(MenuItem Item){
-		double price = 0;
-		int ItemPos = this.Items.lastIndexOf(Item);
-		
-		if(this.Items.get(ItemPos).getName() == Item.getName()){
-			price = this.Items.get(ItemPos).getPrice();
-		}
-				
-		return price;
+		return Items;
 	}
 	
 	//Return the total price
 	public double getTotalPrice(){
-		return this.totalprice;
+		return totalprice;
 	}
 	
 	//Add an item to the cart
 	public void addItem(MenuItem Item){
-		this.Items.add(Item);
+		Items.add(Item);
+		updateTotalPrice();
 	}
 	
 	//Remove an item from the cart
 	public void removeItem(MenuItem Item){
-		this.Items.remove(Item);
+		Items.remove(Item);
+		updateTotalPrice();
 	}
 	
 	//Remove all items from the cart
-	public void removeAllItems(boolean check){
-		this.IsSure = check;
-		if(this.IsSure == true){
-			this.Items.clear();
-		}
+	public void removeAllItems(){
+		Items.clear();
+		updateTotalPrice();
 	}
 	
 	//Constructor
-	Cart(ArrayList<MenuItem> Items, double Totalprice, Boolean IsSure){
-		this.Items = Items;
-		this.totalprice = Totalprice;
-		this.IsSure = IsSure;
+	Cart(ArrayList<MenuItem> Item, double Totalprice){
+		Items = Item;
+		totalprice = Totalprice;
 	}
 }

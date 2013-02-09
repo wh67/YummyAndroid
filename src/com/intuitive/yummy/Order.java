@@ -1,52 +1,55 @@
 package com.intuitive.yummy;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Order implements Serializable {
 	private int ID = 0;
-	private int Duration = 0;
-	private String Status;
-	
-	//Set status of the order
-	public void setStatus(String stat){
-		if (stat == "C") {
-			this.Status = "Cancelled";
-		}
-		else if (stat == "IP"){
-			this.Status = "InProgress";
-		}
-		else if (stat == "F"){
-			this.Status = "Finished";
-		}
-		else {
-			this.Status = "Set Status";
-		}
+	private int Duration = 0;  
+	private ArrayList<MenuItem> Item = new ArrayList<MenuItem>();
+	private double TotalPrice = 0;
+	private enum Status {
+        Cancelled, InProgress, Finished   
 	}
+	private Status status;
 	
 	//Set the wait time of the order
 	public void setWaitingTime(int orderTime){
-		this.Duration = orderTime;
+		Duration = orderTime;
 	}
 	
 	//Return the order ID
 	public int getOrderIdNumber(){
-		return this.ID;
+		return ID;
 	}
 	
 	//Return how long the order will take
 	public int getDuration(){
-		return this.Duration;
+		return Duration;
 	}
 	
 	//Return the status of the order
-	public String getStatus(){
-		return this.Status;
+	public Status getStatus(){
+		return status;
+	}
+	
+	//Return the items of the order
+	public ArrayList<MenuItem> getOrderItems(){
+		return Item;
+	}
+		
+	//Return the total price of the order
+	public double getTotalOrderPrice(){
+		return TotalPrice;
 	}
 	
 	//Constructor
-	Order(int id, int duration, String status){
-		this.ID = id;
-		this.Duration = duration;
-		this.Status = status;
+	Order(int id, int duration, Status stat,ArrayList<MenuItem> item, double totalPrice){
+		ID = id;
+		Duration = duration;
+		status = stat;
+		Item = item;
+		TotalPrice = totalPrice;
+		
 	}
 }
