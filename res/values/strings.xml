@@ -82,5 +82,6 @@
     <string name="save">Save</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_cart">MainActivity</string>
+    <string name="title_activity_order_confirmation">OrderConfirmationActivity</string>
 
 </resources>

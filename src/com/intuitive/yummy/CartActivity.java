@@ -13,6 +13,7 @@ import android.view.View;
 
 public class CartActivity extends Activity {
 
+	//Dummy data
 	String[] addedItems = { "16 inch Cheese Pizza", "16 inch Pepperoni Pizza",
 			"16 inch Sausage Pizza", "Cheese Pizza Slice" };
 	double[] price = { 10, 11, 12, 1.5 };
@@ -31,9 +32,11 @@ public class CartActivity extends Activity {
 			TextView tv1 = new TextView(this);
 			TextView tv2 = new TextView(this);
 			TextView tv3 = new TextView(this);
+			//user defined function
 			createView(tr, tv1, Integer.toString(1));
 			createView(tr, tv2, addedItems[i]);
 			createView(tr, tv3, Double.toString(price[i]));
+			//add row to table
 			t1.addView(tr);
 		}
 		
@@ -55,6 +58,7 @@ public class CartActivity extends Activity {
 		return true;
 	}
 
+	//Function to add each cell to row
 	public void createView(TableRow tr, TextView t, String viewdata) {
 		//content of each cell
 		t.setText(viewdata);
@@ -69,9 +73,16 @@ public class CartActivity extends Activity {
 		//add textview to row
 		tr.addView(t);
 	}
-
+	
+	//Go to home page when home button is clicked
     public void home(View v){
     	Intent intent = new Intent(this, MainActivity.class);
+    	startActivity(intent);
+    }
+    
+    //Go to checkout page when checkout button is clicked
+    public void checkout(View v){
+    	Intent intent = new Intent(this, OrderConfirmationActivity.class);
     	startActivity(intent);
     }
 }
