@@ -2,14 +2,18 @@ package com.intuitive.yummy;
 
 import android.app.ListActivity;
 import android.content.Intent;
-//import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.view.View.OnClickListener;
+
 
 public class MenuActivity extends ListActivity {
 	private com.intuitive.yummy.Menu menu;
-	
+		
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,7 @@ public class MenuActivity extends ListActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
         		android.R.layout.simple_list_item_1, menuItemsName);
         setListAdapter(adapter);
+   
     }
 
     @Override
@@ -46,4 +51,10 @@ public class MenuActivity extends ListActivity {
         getMenuInflater().inflate(R.menu.activity_search_results, menu);
         return true;
     }
+    
+    public void cart(View v){
+    	Intent intent = new Intent(this, CartActivity.class);
+    	startActivity(intent);
+    }
+    
 }
