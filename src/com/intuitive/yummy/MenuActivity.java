@@ -23,13 +23,10 @@ public class MenuActivity extends Activity {
         menu = (com.intuitive.yummy.Menu)intent.getSerializableExtra("Menu");
         MenuItem[] itemsArray = new MenuItem[menu.getMenuItem().size()];
         menu.getMenuItem().toArray(itemsArray);
-        
-		MenuItem[] itemsArray = new MenuItem[menu.getMenuItem().size()];
-		menu.getMenuItem().toArray(itemsArray);
 
 		System.out.println("creating adapter");
 		MenuItemAdapter adapter = new MenuItemAdapter(this, R.layout.list_menuitem, itemsArray);
-		listView = (ListView)findViewById(R.id.listMenuItem);
+		listView = (ListView) findViewById(R.id.listMenuItem);
 		listView.setAdapter(adapter);
     }
     
